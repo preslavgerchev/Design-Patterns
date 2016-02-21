@@ -1,19 +1,21 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace StrategyPattern
 {
     public class SCANReadingStrategy : IDiskReadingStrategy
     {
-        private bool goingDown;
+        private bool goingDown = true;
 
-        public int NextNumberPosition(IList<int> numbers, int currentPosition)
+        public int NextNumber(IList<int> numbers, int currentNumber)
         {
-            //evalute if up or down only on first or last position
-            if (currentPosition == 0 || currentPosition == numbers.Count - 1)
-            {
-                goingDown = currentPosition < numbers.Count - 1;
-            }
-            return goingDown ? ++currentPosition : --currentPosition;
+            goingDown = goingDown ?
+            numbers.Where(n => n > currentNumber).Count() > 0 :
+            numbers.Where(n => n < currentNumber).Count() == 0;
+
+            return goingDown ?
+            numbers.Where(n => n > currentNumber).OrderBy(n => n).First() :
+            numbers.Where(n => n < currentNumber).OrderBy(n => n).Last();
         }
     }
 }

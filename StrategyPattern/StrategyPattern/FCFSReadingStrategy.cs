@@ -4,9 +4,9 @@ namespace StrategyPattern
 {
     public class FCFSReadingStrategy : IDiskReadingStrategy
     {
-        public int NextNumberPosition(IList<int> numbers, int currentPosition)
+        public int NextNumber(IList<int> numbers, int currentNumber)
         {
-            return 0;
+            return numbers[0];
         }
     }
 }

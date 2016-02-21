@@ -6,11 +6,11 @@ namespace StrategyPattern
 {
     public class SSTFReadingStrategy : IDiskReadingStrategy
     {
-        public int NextNumberPosition(IList<int> numbers, int currentPosition)
+        public int NextNumber(IList<int> numbers, int currentNumber)
         {
-            int currentNumber = numbers.ElementAt(currentPosition);
-
-            return  numbers.OrderBy(item => Math.Abs(currentNumber- item)).First();   
+            return numbers
+                .Where(n => n != currentNumber)
+                .Aggregate((x, y) => Math.Abs(x - currentNumber) < Math.Abs(y - currentNumber) ? x : y);
         }
     }
 }

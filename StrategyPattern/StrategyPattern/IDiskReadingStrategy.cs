@@ -4,6 +4,6 @@ namespace StrategyPattern
 {
     public interface IDiskReadingStrategy
     {
-        int NextNumberPosition(IList<int> numbers, int currentPosition);
+        int NextNumber(IList<int> numbers,  int currentNumber);
     }
 }

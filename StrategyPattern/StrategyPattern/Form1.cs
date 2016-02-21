@@ -1,41 +1,80 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StrategyPattern
 {
     public partial class Form1 : Form
     {
-        private static Random randomGenerator;
+        private  Random randomGenerator;
+        private bool tru;
         OperatingSystem os;
         public Form1()
         {
             InitializeComponent();
             randomGenerator = new Random();
             os = new OperatingSystem();
+            timer1.Interval = 2000;
             for (int i = 0; i < 20; i++)
             {
-                os.Numbers.Add(randomGenerator.Next(1, 101));
+                int number = randomGenerator.Next(1, 101);
+                while (os.Numbers.Contains(number))
+                {
+                    number = randomGenerator.Next(1, 101);
+                }
+                os.Numbers.Add(number);
             }
+        
             os.Numbers.ForEach(number => listBox1.Items.Add(number));
+            var orderedList = os.Numbers.OrderBy(n => n);
+            foreach (int i in orderedList)
+            {
+                listBox2.Items.Add(i);
+            }
+            os.CurrentNumber = os.Numbers[0];
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int number = os.ReadNumber();
-            label1.Text = number.ToString();
-            os.CurrentPosition = number;
+            if (tru)
+            {
+                os.DiskReadingStrategy = new SCANReadingStrategy();
+            }
+            else
+            {
+                os.DiskReadingStrategy = new SSTFReadingStrategy();
+            }
+            tru = !tru;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = os.ReadNumber().ToString();
+            os.Numbers.Remove(os.CurrentNumber);
+            int number = randomGenerator.Next(1, 101);
+            while (os.Numbers.Contains(number))
+            {
+                number = randomGenerator.Next(1, 101);
+            }
+            os.Numbers.Add(number);
             listBox1.Items.Clear();
+
             for (int i = 0; i < os.Numbers.Count; i++)
             {
                 listBox1.Items.Add(os.Numbers.ElementAt(i));
             }
+            listBox2.Items.Clear();
+            var orderedList = os.Numbers.OrderBy(n => n);
+            foreach (int i in orderedList)
+            {
+                listBox2.Items.Add(i);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
         }
     }
 }
