@@ -13,14 +13,21 @@ namespace StrategyPattern
             InitializeComponent();
             os = new OperatingSystem(new FCFSSchedulerStrategy());
             timer1.Interval = 1000;
+            updateListBoxes();
+            btnStop.Enabled = false;
+            tbCurrent.Font = new Font(tbCurrent.Font.FontFamily, 20);
+        }
+
+        private void updateListBoxes()
+        {
+            lbRandomNumbers.Items.Clear();
+            lbOrderedNumbers.Items.Clear();
             os.Numbers.ForEach(number => lbRandomNumbers.Items.Add(number));
             var orderedList = os.Numbers.OrderBy(n => n);
             foreach (int i in orderedList)
             {
                 lbOrderedNumbers.Items.Add(i);
             }
-            btnStop.Enabled = false;
-            tbCurrent.Font = new Font(tbCurrent.Font.FontFamily, 20);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -30,17 +37,7 @@ namespace StrategyPattern
             progressBar1.Value = os.CurrentNumber;
             os.Numbers.Remove(os.CurrentNumber);
             os.PopulateNumbersList();
-            lbRandomNumbers.Items.Clear();
-            for (int i = 0; i < os.Numbers.Count; i++)
-            {
-                lbRandomNumbers.Items.Add(os.Numbers.ElementAt(i));
-            }
-            lbOrderedNumbers.Items.Clear();
-            var orderedList = os.Numbers.OrderBy(n => n);
-            foreach (int i in orderedList)
-            {
-                lbOrderedNumbers.Items.Add(i);
-            }
+            updateListBoxes();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
