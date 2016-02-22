@@ -1,9 +1,0 @@
-D:\Programming\YEAR 2\DPR\Design-Patterns\StrategyPattern\StrategyPatternUnitTesting\bin\Debug\StrategyPatternUnitTesting.dll
-D:\Programming\YEAR 2\DPR\Design-Patterns\StrategyPattern\StrategyPatternUnitTesting\bin\Debug\StrategyPatternUnitTesting.pdb
-D:\Programming\YEAR 2\DPR\Design-Patterns\StrategyPattern\StrategyPatternUnitTesting\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-D:\Programming\YEAR 2\DPR\Design-Patterns\StrategyPattern\StrategyPatternUnitTesting\bin\Debug\StrategyPattern.exe
-D:\Programming\YEAR 2\DPR\Design-Patterns\StrategyPattern\StrategyPatternUnitTesting\bin\Debug\StrategyPattern.pdb
-D:\Programming\YEAR 2\DPR\Design-Patterns\StrategyPattern\StrategyPatternUnitTesting\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
-D:\Programming\YEAR 2\DPR\Design-Patterns\StrategyPattern\StrategyPatternUnitTesting\obj\Debug\StrategyPatternUnitTesting.csprojResolveAssemblyReference.cache
-D:\Programming\YEAR 2\DPR\Design-Patterns\StrategyPattern\StrategyPatternUnitTesting\obj\Debug\StrategyPatternUnitTesting.dll
-D:\Programming\YEAR 2\DPR\Design-Patterns\StrategyPattern\StrategyPatternUnitTesting\obj\Debug\StrategyPatternUnitTesting.pdb
