@@ -1,6 +1,6 @@
 ﻿namespace StrategyPattern
 {
-    partial class Form1
+    partial class StrategyPatternForm
     {
         /// <summary>
         /// Required designer variable.
@@ -97,7 +97,7 @@
             this.trackBar1.Size = new System.Drawing.Size(45, 454);
             this.trackBar1.TabIndex = 5;
             // 
-            // Form1
+            // StrategyPatternForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -108,8 +108,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "StrategyPatternForm";
+            this.Text = "Strategy Pattern";
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

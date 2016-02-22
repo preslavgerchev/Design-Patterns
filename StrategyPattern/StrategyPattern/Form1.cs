@@ -4,12 +4,12 @@ using System.Windows.Forms;
 
 namespace StrategyPattern
 {
-    public partial class Form1 : Form
+    public partial class StrategyPatternForm : Form
     {
        
         private bool tru;
         OperatingSystem os;
-        public Form1()
+        public StrategyPatternForm()
         {
             InitializeComponent();
             os = new OperatingSystem(new FCFSSchedulerStrategy());
@@ -37,10 +37,10 @@ namespace StrategyPattern
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Text = os.ReadNumber().ToString();
+            label1.Text = os.NextNumber().ToString();
             trackBar1.Value = os.CurrentNumber;
             os.Numbers.Remove(os.CurrentNumber);
-            os.PopulateNumbersList();
+            os.Numbers.Add(os.CurrentNumber);
             listBox1.Items.Clear();
             for (int i = 0; i < os.Numbers.Count; i++)
             {
