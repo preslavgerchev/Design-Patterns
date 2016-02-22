@@ -49,17 +49,17 @@ namespace StrategyPattern
 
         private void rbFCFS_MouseClick(object sender, MouseEventArgs e)
         {
-            os.DiskReadingStrategy = new FCFSSchedulerStrategy();
+            os.DiskSchedulerStrategy = new FCFSSchedulerStrategy();
         }
 
         private void rbSSTF_MouseClick(object sender, MouseEventArgs e)
         {
-            os.DiskReadingStrategy = new SSTFSchedulerStrategy();
+            os.DiskSchedulerStrategy = new SSTFSchedulerStrategy();
         }
 
         private void rbSCAN_MouseClick(object sender, MouseEventArgs e)
         {
-            os.DiskReadingStrategy = new SCANSchedulerStrategy();
+            os.DiskSchedulerStrategy = new SCANSchedulerStrategy();
         }
 
         private void btnStop_Click(object sender, EventArgs e)
