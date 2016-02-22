@@ -2,7 +2,7 @@
 
 namespace StrategyPattern
 {
-    public interface IDiskReadingStrategy
+    public interface IDiskSchedulerStrategy
     {
         int NextNumber(IList<int> numbers,  int currentNumber);
     }

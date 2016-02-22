@@ -35,6 +35,8 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button2 = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -86,11 +88,21 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(468, 12);
+            this.trackBar1.Maximum = 100;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.trackBar1.Size = new System.Drawing.Size(45, 454);
+            this.trackBar1.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 365);
+            this.ClientSize = new System.Drawing.Size(603, 484);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.label1);
@@ -98,6 +110,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,6 +124,7 @@
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
 
