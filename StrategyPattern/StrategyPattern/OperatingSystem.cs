@@ -1,15 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace StrategyPattern
 {
     public class OperatingSystem
     {
-        public List<int> Numbers { get; private set; }
+        private const int LIST_SIZE = 15;
+        private static Random randomNumberGenerator;
+
+        public List<int> Numbers { get; set; }
         public int CurrentNumber { get; set; }
         public IDiskSchedulerStrategy DiskReadingStrategy { get; set; }
 
         public OperatingSystem(IDiskSchedulerStrategy diskReadingStrategy)
         {
+            randomNumberGenerator = new Random();
+            Numbers = new List<int>();
             PopulateNumbersList();
             DiskReadingStrategy = diskReadingStrategy;
             CurrentNumber = Numbers[0];
@@ -30,7 +36,15 @@ namespace StrategyPattern
         /// </summary>
         public void PopulateNumbersList()
         {
-            Numbers = new List<int>() { 45, 3, 78, 56, 34, 23, 24, 12, 7, 6, 99, 100, 87, 25, 56, 67, 73, 69, 81, 49 };
+            for (int i = Numbers.Count; i < LIST_SIZE; i++)
+            {
+                int randomNumber = randomNumberGenerator.Next(1, 101);
+                while (Numbers.Contains(randomNumber))
+                {
+                    randomNumber = randomNumberGenerator.Next(1, 101);
+                }
+                Numbers.Add(randomNumber);
+            }
         }
     }
 }

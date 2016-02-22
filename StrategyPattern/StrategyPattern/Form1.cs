@@ -40,7 +40,7 @@ namespace StrategyPattern
             label1.Text = os.NextNumber().ToString();
             trackBar1.Value = os.CurrentNumber;
             os.Numbers.Remove(os.CurrentNumber);
-            os.Numbers.Add(os.CurrentNumber);
+            os.PopulateNumbersList();
             listBox1.Items.Clear();
             for (int i = 0; i < os.Numbers.Count; i++)
             {
