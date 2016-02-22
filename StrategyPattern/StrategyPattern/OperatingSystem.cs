@@ -6,15 +6,13 @@ namespace StrategyPattern
     public class OperatingSystem
     {
         private const int LIST_SIZE = 15;
-        private static Random randomNumberGenerator;
-
+        private static readonly Random randomNumberGenerator = new Random();
         public List<int> Numbers { get; set; }
         public int CurrentNumber { get; set; }
         public IDiskSchedulerStrategy DiskReadingStrategy { get; set; }
 
         public OperatingSystem(IDiskSchedulerStrategy diskReadingStrategy)
         {
-            randomNumberGenerator = new Random();
             Numbers = new List<int>();
             PopulateNumbersList();
             DiskReadingStrategy = diskReadingStrategy;
