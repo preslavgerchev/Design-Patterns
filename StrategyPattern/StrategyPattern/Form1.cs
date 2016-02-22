@@ -1,62 +1,75 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace StrategyPattern
 {
     public partial class StrategyPatternForm : Form
     {
-       
-        private bool tru;
         OperatingSystem os;
         public StrategyPatternForm()
         {
             InitializeComponent();
             os = new OperatingSystem(new FCFSSchedulerStrategy());
             timer1.Interval = 1000;
-            os.Numbers.ForEach(number => listBox1.Items.Add(number));
+            os.Numbers.ForEach(number => lbRandomNumbers.Items.Add(number));
             var orderedList = os.Numbers.OrderBy(n => n);
             foreach (int i in orderedList)
             {
-                listBox2.Items.Add(i);
+                lbOrderedNumbers.Items.Add(i);
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (tru)
-            {
-                os.DiskReadingStrategy = new SCANSchedulerStrategy();
-            }
-            else
-            {
-                os.DiskReadingStrategy = new SSTFSchedulerStrategy();
-            }
-            tru = !tru;
+            btnStop.Enabled = false;
+            tbCurrent.Font = new Font(tbCurrent.Font.FontFamily, 20);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label1.Text = os.NextNumber().ToString();
+            tbCurrent.Text = os.NextNumber().ToString();
             trackBar1.Value = os.CurrentNumber;
+            progressBar1.Value = os.CurrentNumber;
             os.Numbers.Remove(os.CurrentNumber);
             os.PopulateNumbersList();
-            listBox1.Items.Clear();
+            lbRandomNumbers.Items.Clear();
             for (int i = 0; i < os.Numbers.Count; i++)
             {
-                listBox1.Items.Add(os.Numbers.ElementAt(i));
+                lbRandomNumbers.Items.Add(os.Numbers.ElementAt(i));
             }
-            listBox2.Items.Clear();
+            lbOrderedNumbers.Items.Clear();
             var orderedList = os.Numbers.OrderBy(n => n);
             foreach (int i in orderedList)
             {
-                listBox2.Items.Add(i);
+                lbOrderedNumbers.Items.Add(i);
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnStart_Click(object sender, EventArgs e)
         {
             timer1.Start();
+            btnStart.Enabled = false;
+            btnStop.Enabled = true;
+        }
+
+        private void rbFCFS_MouseClick(object sender, MouseEventArgs e)
+        {
+            os.DiskReadingStrategy = new FCFSSchedulerStrategy();
+        }
+
+        private void rbSSTF_MouseClick(object sender, MouseEventArgs e)
+        {
+            os.DiskReadingStrategy = new SSTFSchedulerStrategy();
+        }
+
+        private void rbSCAN_MouseClick(object sender, MouseEventArgs e)
+        {
+            os.DiskReadingStrategy = new SCANSchedulerStrategy();
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            btnStart.Enabled = true;
+            btnStop.Enabled = false;
         }
     }
 }
