@@ -9,13 +9,13 @@ namespace StrategyPattern
         private static readonly Random randomNumberGenerator = new Random();
         public List<int> Numbers { get; set; }
         public int CurrentNumber { get; set; }
-        public IDiskSchedulerStrategy DiskReadingStrategy { get; set; }
+        public IDiskSchedulerStrategy DiskSchedulerStrategy { get; set; }
 
-        public OperatingSystem(IDiskSchedulerStrategy diskReadingStrategy)
+        public OperatingSystem(IDiskSchedulerStrategy diskSchedulerStrategy)
         {
             Numbers = new List<int>();
             PopulateNumbersList();
-            DiskReadingStrategy = diskReadingStrategy;
+            DiskSchedulerStrategy = diskSchedulerStrategy;
             CurrentNumber = Numbers[0];
         }
 
@@ -25,7 +25,7 @@ namespace StrategyPattern
         /// <returns>After assigning the current number it is returned.</returns>
         public int NextNumber()
         {
-            CurrentNumber = DiskReadingStrategy.NextNumber(Numbers, CurrentNumber);
+            CurrentNumber = DiskSchedulerStrategy.NextNumber(Numbers, CurrentNumber);
             return CurrentNumber;
         }
 
