@@ -54,17 +54,21 @@
             // lbRandomNumbers
             // 
             this.lbRandomNumbers.FormattingEnabled = true;
-            this.lbRandomNumbers.Location = new System.Drawing.Point(12, 38);
+            this.lbRandomNumbers.ItemHeight = 16;
+            this.lbRandomNumbers.Location = new System.Drawing.Point(16, 47);
+            this.lbRandomNumbers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbRandomNumbers.Name = "lbRandomNumbers";
-            this.lbRandomNumbers.Size = new System.Drawing.Size(42, 303);
+            this.lbRandomNumbers.Size = new System.Drawing.Size(55, 372);
             this.lbRandomNumbers.TabIndex = 0;
             // 
             // lbOrderedNumbers
             // 
             this.lbOrderedNumbers.FormattingEnabled = true;
-            this.lbOrderedNumbers.Location = new System.Drawing.Point(12, 38);
+            this.lbOrderedNumbers.ItemHeight = 16;
+            this.lbOrderedNumbers.Location = new System.Drawing.Point(16, 47);
+            this.lbOrderedNumbers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbOrderedNumbers.Name = "lbOrderedNumbers";
-            this.lbOrderedNumbers.Size = new System.Drawing.Size(42, 303);
+            this.lbOrderedNumbers.Size = new System.Drawing.Size(55, 372);
             this.lbOrderedNumbers.TabIndex = 3;
             // 
             // timer1
@@ -73,9 +77,10 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(272, 160);
+            this.btnStart.Location = new System.Drawing.Point(391, 214);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(110, 35);
+            this.btnStart.Size = new System.Drawing.Size(147, 43);
             this.btnStart.TabIndex = 4;
             this.btnStart.Text = "START";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -83,20 +88,21 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(34, 410);
+            this.trackBar1.Location = new System.Drawing.Point(45, 505);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.trackBar1.Maximum = 100;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar1.Size = new System.Drawing.Size(419, 45);
+            this.trackBar1.Size = new System.Drawing.Size(559, 56);
             this.trackBar1.TabIndex = 5;
-            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
             // 
             // tbCurrent
             // 
-            this.tbCurrent.Location = new System.Drawing.Point(12, 16);
-            this.tbCurrent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCurrent.Location = new System.Drawing.Point(16, 20);
+            this.tbCurrent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbCurrent.Name = "tbCurrent";
-            this.tbCurrent.Size = new System.Drawing.Size(54, 20);
+            this.tbCurrent.Size = new System.Drawing.Size(71, 22);
             this.tbCurrent.TabIndex = 6;
             this.tbCurrent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -104,10 +110,10 @@
             // 
             this.rbFCFS.AutoSize = true;
             this.rbFCFS.Checked = true;
-            this.rbFCFS.Location = new System.Drawing.Point(11, 16);
-            this.rbFCFS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbFCFS.Location = new System.Drawing.Point(15, 20);
+            this.rbFCFS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbFCFS.Name = "rbFCFS";
-            this.rbFCFS.Size = new System.Drawing.Size(127, 17);
+            this.rbFCFS.Size = new System.Drawing.Size(168, 21);
             this.rbFCFS.TabIndex = 7;
             this.rbFCFS.TabStop = true;
             this.rbFCFS.Text = "First Come First Serve";
@@ -117,10 +123,10 @@
             // rbSSTF
             // 
             this.rbSSTF.AutoSize = true;
-            this.rbSSTF.Location = new System.Drawing.Point(11, 38);
-            this.rbSSTF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbSSTF.Location = new System.Drawing.Point(15, 47);
+            this.rbSSTF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbSSTF.Name = "rbSSTF";
-            this.rbSSTF.Size = new System.Drawing.Size(140, 17);
+            this.rbSSTF.Size = new System.Drawing.Size(184, 21);
             this.rbSSTF.TabIndex = 8;
             this.rbSSTF.Text = "Shortest Seek Time First";
             this.rbSSTF.UseVisualStyleBackColor = true;
@@ -129,10 +135,10 @@
             // rbSCAN
             // 
             this.rbSCAN.AutoSize = true;
-            this.rbSCAN.Location = new System.Drawing.Point(11, 60);
-            this.rbSCAN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbSCAN.Location = new System.Drawing.Point(15, 74);
+            this.rbSCAN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rbSCAN.Name = "rbSCAN";
-            this.rbSCAN.Size = new System.Drawing.Size(123, 17);
+            this.rbSCAN.Size = new System.Drawing.Size(160, 21);
             this.rbSCAN.TabIndex = 9;
             this.rbSCAN.Text = "SCAN disk (elevator)";
             this.rbSCAN.UseVisualStyleBackColor = true;
@@ -140,9 +146,10 @@
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(272, 209);
+            this.btnStop.Location = new System.Drawing.Point(391, 274);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(110, 35);
+            this.btnStop.Size = new System.Drawing.Size(147, 43);
             this.btnStop.TabIndex = 10;
             this.btnStop.Text = "STOP";
             this.btnStop.UseVisualStyleBackColor = true;
@@ -153,11 +160,11 @@
             this.groupBox1.Controls.Add(this.rbSCAN);
             this.groupBox1.Controls.Add(this.rbSSTF);
             this.groupBox1.Controls.Add(this.rbFCFS);
-            this.groupBox1.Location = new System.Drawing.Point(272, 32);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(363, 39);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(160, 101);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(213, 124);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Strategy";
@@ -165,11 +172,11 @@
             // gbCurrent
             // 
             this.gbCurrent.Controls.Add(this.tbCurrent);
-            this.gbCurrent.Location = new System.Drawing.Point(272, 265);
-            this.gbCurrent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbCurrent.Location = new System.Drawing.Point(409, 359);
+            this.gbCurrent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbCurrent.Name = "gbCurrent";
-            this.gbCurrent.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbCurrent.Size = new System.Drawing.Size(78, 63);
+            this.gbCurrent.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbCurrent.Size = new System.Drawing.Size(104, 78);
             this.gbCurrent.TabIndex = 10;
             this.gbCurrent.TabStop = false;
             this.gbCurrent.Text = "Current";
@@ -177,11 +184,11 @@
             // gbRandomNumbers
             // 
             this.gbRandomNumbers.Controls.Add(this.lbRandomNumbers);
-            this.gbRandomNumbers.Location = new System.Drawing.Point(59, 32);
-            this.gbRandomNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbRandomNumbers.Location = new System.Drawing.Point(79, 39);
+            this.gbRandomNumbers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbRandomNumbers.Name = "gbRandomNumbers";
-            this.gbRandomNumbers.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbRandomNumbers.Size = new System.Drawing.Size(65, 349);
+            this.gbRandomNumbers.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbRandomNumbers.Size = new System.Drawing.Size(87, 430);
             this.gbRandomNumbers.TabIndex = 12;
             this.gbRandomNumbers.TabStop = false;
             this.gbRandomNumbers.Text = "Random numbers";
@@ -189,28 +196,28 @@
             // gbOrderedNumbers
             // 
             this.gbOrderedNumbers.Controls.Add(this.lbOrderedNumbers);
-            this.gbOrderedNumbers.Location = new System.Drawing.Point(136, 32);
-            this.gbOrderedNumbers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbOrderedNumbers.Location = new System.Drawing.Point(181, 39);
+            this.gbOrderedNumbers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbOrderedNumbers.Name = "gbOrderedNumbers";
-            this.gbOrderedNumbers.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbOrderedNumbers.Size = new System.Drawing.Size(65, 349);
+            this.gbOrderedNumbers.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbOrderedNumbers.Size = new System.Drawing.Size(87, 430);
             this.gbOrderedNumbers.TabIndex = 13;
             this.gbOrderedNumbers.TabStop = false;
             this.gbOrderedNumbers.Text = "Ordered numbers";
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(34, 462);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.progressBar1.Location = new System.Drawing.Point(45, 569);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(419, 32);
+            this.progressBar1.Size = new System.Drawing.Size(559, 39);
             this.progressBar1.TabIndex = 14;
             // 
             // StrategyPatternForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 508);
+            this.ClientSize = new System.Drawing.Size(659, 625);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.gbOrderedNumbers);
             this.Controls.Add(this.gbRandomNumbers);
@@ -219,6 +226,7 @@
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.btnStart);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "StrategyPatternForm";
             this.Text = "Strategy Pattern";
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
