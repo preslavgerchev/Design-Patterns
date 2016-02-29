@@ -26,7 +26,8 @@ namespace ObserverPattern_Push
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {   
+           
             int homeSideScore = int.Parse(textBox4.Text);
             int guestSideScore = int.Parse(textBox5.Text);
             matchTracker.UpdateScore(homeSideScore, guestSideScore);
