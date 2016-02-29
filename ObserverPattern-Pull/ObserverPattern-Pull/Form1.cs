@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
 
 namespace ObserverPattern_Pull
 {
@@ -16,6 +17,10 @@ namespace ObserverPattern_Pull
         private GuestSideScoreObserver guestSideObserver;
         private HomeSideScoreObserver homeSideObserver;
         private MatchDrawObserver drawObserver;
+
+        private bool homeNotified = true;
+        private bool guestNotified = true;
+        private bool drawNotified = true;
 
         public Form1()
         {
@@ -28,23 +33,22 @@ namespace ObserverPattern_Pull
 
             guestSideObserver.OnUpdate = () =>
             {
-                textBox2.Text = guestSideObserver.ToString();
+                label2.Text = guestSideObserver.ToString();
                 label7.Text = "Notified!";
                 label7.BackColor = Color.Green;
             };
             homeSideObserver.OnUpdate = () =>
             {
-                textBox1.Text = homeSideObserver.ToString();
+                label1.Text = homeSideObserver.ToString();
                 label6.Text = "Notified!";
                 label6.BackColor = Color.Green;
             };
             drawObserver.OnUpdate = () =>
             {
-                textBox3.Text = drawObserver.ToString();
+                label9.Text = drawObserver.ToString();
                 label8.Text = "Notified!";
                 label8.BackColor = Color.Green;
-            }
-            ;
+            };
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -59,17 +63,50 @@ namespace ObserverPattern_Pull
 
         private void button2_Click(object sender, EventArgs e)
         {
-            matchTracker.RemoveObserver(homeSideObserver);
+            if (homeNotified)
+            {
+                matchTracker.RemoveObserver(homeSideObserver);
+                homeNotified = false;
+                button2.Text = "Subscribe";
+            }
+            else
+            {
+                matchTracker.AddObserver(homeSideObserver);
+                homeNotified = true;
+                button2.Text = "Unsubscribe";
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            matchTracker.RemoveObserver(guestSideObserver);
+            if (guestNotified)
+            {
+                matchTracker.RemoveObserver(guestSideObserver);
+                guestNotified = false;
+                button3.Text = "Subscribe";
+            }
+            else
+            {
+                matchTracker.AddObserver(guestSideObserver);
+                guestNotified = true;
+                button2.Text = "Unsubscribe";
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            matchTracker.RemoveObserver(drawObserver);
+            if (drawNotified)
+            {
+                matchTracker.RemoveObserver(drawObserver);
+                drawNotified = false;
+                button4.Text = "Subscribe";
+            }
+            else
+            {
+                matchTracker.AddObserver(drawObserver);
+                drawNotified = true;
+                button2.Text = "Unsubscribe";
+            }
         }
     }
 }
