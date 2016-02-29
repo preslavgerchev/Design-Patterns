@@ -5,12 +5,12 @@ namespace ObserverPattern_Push
     public class MatchObserver : IObserver
     {
         public string Name { get; }
-        public ISubject Subject { get; }
+        public MatchTracker Subject { get; }
         public int HomeSideScore { get; private set; }
         public int GuestSideScore { get; private set; }
         public Action OnUpdate;
 
-        public MatchObserver(ISubject subject, string name)
+        public MatchObserver(MatchTracker subject, string name)
         {
             this.Subject = subject;
             subject.AddObserver(this);
@@ -22,10 +22,10 @@ namespace ObserverPattern_Push
             return this.HomeSideScore + " : " + this.GuestSideScore;
         }
 
-        public void Update(int homeSideScore, int guestSideScore)
+        public void Update()
         {
-            this.HomeSideScore = homeSideScore;
-            this.GuestSideScore = guestSideScore;
+            this.HomeSideScore = Subject.HomeSideScore;
+            this.GuestSideScore = Subject.GuestSideScore;
             OnUpdate();
         }
     }

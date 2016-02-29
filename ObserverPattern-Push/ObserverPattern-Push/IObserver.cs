@@ -2,6 +2,6 @@
 {
     public interface IObserver
     {
-        void Update(int homeSideScore,int guestSideScore);
+        void Update();
     }
 }

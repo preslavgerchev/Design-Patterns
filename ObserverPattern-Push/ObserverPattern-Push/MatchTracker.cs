@@ -4,7 +4,6 @@ namespace ObserverPattern_Push
 {
     public class MatchTracker : ISubject
     {
-        
         public int HomeSideScore { get; set; }
         public int GuestSideScore { get; set; }
         private IList<IObserver> observers;
@@ -23,7 +22,7 @@ namespace ObserverPattern_Push
         {
             foreach (IObserver observer in observers)
             {
-                observer.Update(HomeSideScore,GuestSideScore);
+                observer.Update();
             }
         }
 
