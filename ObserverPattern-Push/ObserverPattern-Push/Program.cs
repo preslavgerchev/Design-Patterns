@@ -16,7 +16,7 @@ namespace ObserverPattern_Push
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new ObserverPatternForm());
         }
     }
 }

@@ -11,7 +11,7 @@ using System.Drawing.Text;
 
 namespace ObserverPattern_Pull
 {
-    public partial class Form1 : Form
+    public partial class ObserverPatternForm : Form
     {
         private MatchTracker matchTracker;
         private GuestSideScoreObserver guestSideObserver;
@@ -22,7 +22,7 @@ namespace ObserverPattern_Pull
         private bool guestNotified = true;
         private bool drawNotified = true;
 
-        public Form1()
+        public ObserverPatternForm()
         {
             InitializeComponent();
             matchTracker = new MatchTracker();

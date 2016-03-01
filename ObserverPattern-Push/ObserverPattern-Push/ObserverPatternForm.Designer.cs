@@ -1,6 +1,6 @@
 ﻿namespace ObserverPattern_Push
 {
-    partial class Form1
+    partial class ObserverPatternForm
     {
         /// <summary>
         /// Required designer variable.
@@ -70,7 +70,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(43, 55);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 39);
+            this.label9.Size = new System.Drawing.Size(0, 38);
             this.label9.TabIndex = 15;
             // 
             // button4
@@ -236,7 +236,7 @@
             this.label13.TabIndex = 9;
             this.label13.Text = "Guest Side Score";
             // 
-            // Form1
+            // ObserverPatternForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -245,9 +245,9 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "ObserverPatternForm";
+            this.Text = "Observer Pattern Form";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿namespace ObserverPattern_Pull
 {
-    partial class Form1
+    partial class ObserverPatternForm
     {
         /// <summary>
         /// Required designer variable.
@@ -236,7 +236,7 @@
             this.label8.Size = new System.Drawing.Size(0, 17);
             this.label8.TabIndex = 11;
             // 
-            // Form1
+            // ObserverPatternForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -246,8 +246,8 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "ObserverPatternForm";
+            this.Text = "Observer Pattern Form";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

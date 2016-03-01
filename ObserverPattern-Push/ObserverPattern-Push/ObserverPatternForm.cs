@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace ObserverPattern_Push
 {
-    public partial class Form1 : Form
+    public partial class ObserverPatternForm : Form
     {
         private MatchTracker matchTracker;
         private MatchObserver fifaMatchObserver;
@@ -16,7 +16,7 @@ namespace ObserverPattern_Push
         private bool uefaNotified = true;
         private bool ourNotified = true;
 
-        public Form1()
+        public ObserverPatternForm()
         {
             InitializeComponent();
             matchTracker = new MatchTracker();
