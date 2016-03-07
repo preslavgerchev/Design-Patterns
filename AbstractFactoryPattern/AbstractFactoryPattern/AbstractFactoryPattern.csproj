@@ -48,12 +48,12 @@
   <ItemGroup>
     <Compile Include="Audi\AudiSpeed.cs" />
     <Compile Include="BMW\BMWSpeed.cs" />
-    <Compile Include="Factories\AudiCarFactory.cs" />
+    <Compile Include="Factories\AudiCarPartsFactory.cs" />
     <Compile Include="Audi\AudiBrand.cs" />
     <Compile Include="Audi\AudiCarColor.cs" />
     <Compile Include="Audi\AudiEngine.cs" />
     <Compile Include="Audi\AudiTyres.cs" />
-    <Compile Include="Factories\BMWCarFactory.cs" />
+    <Compile Include="Factories\BMWCarPartsFactory.cs" />
     <Compile Include="BMW\BMWBrand.cs" />
     <Compile Include="BMW\BMWCarColor.cs" />
     <Compile Include="BMW\BMWEngine.cs" />
@@ -65,13 +65,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IAbstractCarFactory.cs" />
+    <Compile Include="IAbstractCarPartsFactory.cs" />
     <Compile Include="IBrand.cs" />
     <Compile Include="ICarColor.cs" />
     <Compile Include="IEngine.cs" />
     <Compile Include="ISpeed.cs" />
     <Compile Include="ITyres.cs" />
-    <Compile Include="Factories\MercedesCarFactory.cs" />
+    <Compile Include="Factories\MercedesCarPartsFactory.cs" />
     <Compile Include="Mercedes\MercedesBrand.cs" />
     <Compile Include="Mercedes\MercedesCarColor.cs" />
     <Compile Include="Mercedes\MercedesEngine.cs" />

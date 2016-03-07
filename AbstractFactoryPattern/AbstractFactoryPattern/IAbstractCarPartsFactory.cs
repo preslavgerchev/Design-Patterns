@@ -1,6 +1,6 @@
 ﻿namespace AbstractFactoryPattern
 {
-    public interface IAbstractCarFactory
+    public interface IAbstractCarPartsFactory
     {
         IBrand CreateBrand();
         ICarColor CreateCarColor();

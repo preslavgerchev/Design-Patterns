@@ -1,32 +1,32 @@
 ﻿namespace AbstractFactoryPattern
 {
-    using Audi;
+    using Mercedes;
 
-    public class AudiCarFactory : IAbstractCarFactory
+    public class MercedesCarFactory : IAbstractCarPartsFactory
     {
         public IBrand CreateBrand()
         {
-            return new AudiBrand();
+            return new MercedesBrand();
         }
 
         public ICarColor CreateCarColor()
         {
-            return new AudiCarColor();
+            return new MercedesCarColor();
         }
 
         public IEngine CreateEngine()
         {
-            return new AudiEngine();
+            return new MercedesEngine();
         }
 
         public ISpeed CreateSpeed()
         {
-            return new AudiSpeed();
+            return new MercedesSpeed();
         }
 
         public ITyres CreateTyres()
         {
-            return new AudiTyres();
+            return new MercedesTyres();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace AbstractFactoryPattern
         IEngine Engine { get; }
         ISpeed Speed { get; }
 
-        public Car(IAbstractCarFactory carFactory)
+        public Car(IAbstractCarPartsFactory carFactory)
         {
             this.Brand = carFactory.CreateBrand();
             this.Color = carFactory.CreateCarColor();
