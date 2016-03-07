@@ -59,11 +59,11 @@
     <Compile Include="BMW\BMWEngine.cs" />
     <Compile Include="BMW\BMWTyres.cs" />
     <Compile Include="Car.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Abstract Factory Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Abstract Factory Form.Designer.cs">
+      <DependentUpon>Abstract Factory Form.cs</DependentUpon>
     </Compile>
     <Compile Include="IAbstractCarPartsFactory.cs" />
     <Compile Include="IBrand.cs" />
@@ -79,8 +79,8 @@
     <Compile Include="Mercedes\MercedesTyres.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Abstract Factory Form.resx">
+      <DependentUpon>Abstract Factory Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

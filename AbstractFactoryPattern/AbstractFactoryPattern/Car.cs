@@ -10,13 +10,13 @@ namespace AbstractFactoryPattern
         IEngine Engine { get; }
         ISpeed Speed { get; }
 
-        public Car(IAbstractCarPartsFactory carFactory)
+        public Car(IAbstractCarPartsFactory carPartsFactory)
         {
-            this.Brand = carFactory.CreateBrand();
-            this.Color = carFactory.CreateCarColor();
-            this.Tyres = carFactory.CreateTyres();
-            this.Engine = carFactory.CreateEngine();
-            this.Speed = carFactory.CreateSpeed();
+            this.Brand = carPartsFactory.CreateBrand();
+            this.Color = carPartsFactory.CreateCarColor();
+            this.Tyres = carPartsFactory.CreateTyres();
+            this.Engine = carPartsFactory.CreateEngine();
+            this.Speed = carPartsFactory.CreateSpeed();
         }
 
         public override string ToString()

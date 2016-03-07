@@ -2,7 +2,7 @@
 {
     using Mercedes;
 
-    public class MercedesCarFactory : IAbstractCarPartsFactory
+    public class MercedesCarPartsFactory : IAbstractCarPartsFactory
     {
         public IBrand CreateBrand()
         {
