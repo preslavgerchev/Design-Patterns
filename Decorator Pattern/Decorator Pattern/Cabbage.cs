@@ -1,7 +1,10 @@
-﻿namespace Decorator_Pattern
+﻿using System;
+
+namespace Decorator_Pattern
 {
     public class Cabbage : IngredientDecorator
     {
+
         public override string Description
         {
             get
