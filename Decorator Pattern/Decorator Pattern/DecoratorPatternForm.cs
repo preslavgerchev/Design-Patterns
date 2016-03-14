@@ -3,12 +3,12 @@ using System.Windows.Forms;
 
 namespace Decorator_Pattern
 {
-    public partial class Form1 : Form
+    public partial class DecoratorPatternForm : Form
     {
         IOrder order;
         bool check;
 
-        public Form1()
+        public DecoratorPatternForm()
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
