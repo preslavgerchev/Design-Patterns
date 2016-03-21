@@ -4,7 +4,7 @@
     {
         public string TransmitAnalogData(string information)
         {
-            return "Analogously processed the following data: " + information;
+            return "analog: " + information;
         }
     }
 }

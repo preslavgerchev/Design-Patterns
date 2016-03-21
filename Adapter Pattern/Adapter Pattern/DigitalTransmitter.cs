@@ -4,7 +4,7 @@
     {
         public string TransmitDigitalData(string information)
         {
-            return "Digitally processed the following data: " + information;
+            return "digital: " + information;
         }
     }
 }
