@@ -37,53 +37,54 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(253, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(190, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(25, 26);
+            this.button1.Location = new System.Drawing.Point(19, 21);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 53);
+            this.button1.Size = new System.Drawing.Size(104, 43);
             this.button1.TabIndex = 1;
-            this.button1.Text = "BMW";
+            this.button1.Text = "BMW Builder";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(25, 98);
+            this.button2.Location = new System.Drawing.Point(19, 80);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 53);
+            this.button2.Size = new System.Drawing.Size(104, 43);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Audi";
+            this.button2.Text = "Audi Builder";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(25, 172);
+            this.button3.Location = new System.Drawing.Point(19, 140);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(139, 53);
+            this.button3.Size = new System.Drawing.Size(104, 43);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Mercedes";
+            this.button3.Text = "Mercedes Builder";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // BuilderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 253);
+            this.ClientSize = new System.Drawing.Size(368, 206);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "BuilderForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
